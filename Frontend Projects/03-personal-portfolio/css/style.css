@@ -1,0 +1,206 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+.line {
+    margin: 12px 0;
+}
+
+header {
+    width: 100%;
+    height: 480px;
+    border-bottom: 1px solid black;
+}
+header nav {
+    width: 100%;
+    height: 67px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .profile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+header nav .profile img{
+    border: 1px solid black;
+    border-radius: 50%;
+}
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+}
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+header .hero-section {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+header .hero-section h1 {
+    font-size: 46px;
+}
+
+main {
+    width: 100%;
+}
+.middle-section {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 1px solid black;
+    flex-wrap: wrap;
+}
+.middle-section .left, .column-wrapper, .right {
+    width: 33%;
+    padding: 34px;
+}
+.middle-section .column-wrapper {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.middle-section section  {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.middle-section section ul li a {
+    text-decoration: none;
+    color: black;
+}
+.middle-section section ul li a:hover {
+    text-decoration: underline;
+}
+.middle-section .column-wrapper .column a {
+    color: rgb(42, 136, 250);
+    text-decoration: none;
+}
+.middle-section .column-wrapper .column a:hover {
+    text-decoration: underline;
+}
+.middle-section .right ul li::before {
+    content: "- ";
+    margin-right: 10px;
+}
+
+.reviews-section {
+    padding: 34px;
+}
+.reviews-section h2 {
+    margin-bottom: 17px;
+}
+.reviews-section .reviews {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.reviews-section .reviews .card {
+    padding: 19px;
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 38px;
+}
+.reviews-section .reviews .card .comment {
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+.reviews-section .reviews .card .teacher {
+    font-weight: 600;
+    opacity: 0.6;
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    header .hero-section h1 {
+        font-size: 36px;
+    }
+    .middle-section .left, .column-wrapper, .right {
+        width: 100%;
+        padding: 20px;
+        border: none;
+    }
+    .middle-section .column-wrapper {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+    }
+    .middle-section {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .reviews-section .reviews .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        gap: 8px;
+    }
+    header nav .profile {
+        display: flex;
+        flex-direction: column;
+    }
+    header .hero-section h1 {
+        font-size: 28px;
+    }
+    .middle-section .left, .column-wrapper, .right {
+        padding: 10px;
+    }
+    .reviews-section {
+        padding: 20px;
+    }
+    .reviews-section .reviews .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column;
+        height: auto;
+    }
+    header nav ul {
+        gap: 5px;
+    }
+    header .hero-section h1 {
+        font-size: 24px;
+    }
+    header .hero-section p {
+        font-size: 14px;
+    }
+    .middle-section section h2, .reviews-section h2 {
+        font-size: 18px;
+    }
+    footer h4 {
+        font-size: 14px;
+    }
+}
